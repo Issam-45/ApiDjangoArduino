@@ -1,5 +1,9 @@
 from django.db import models
+import telepot
 
+token = "5907427756:AAF6IA7Y5fnFoS9rBFi51YuxP8l8gyT3U1s"
+chat_id = "1911730761"
+bot = telepot.Bot(token)
 
 class Dht (models.Model):
     temp = models.FloatField(null=True)
@@ -9,3 +13,8 @@ class Dht (models.Model):
 
     def __str__(self):
         return str(self.temp)
+
+    def save(self, *args, **kwargs):
+        if self.temp > 10:
+            bot.sendMessage(chat_id, "High temp!" + str(self.temp))
+        return super().save(*args, **kwargs)
