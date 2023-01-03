@@ -1,11 +1,12 @@
 <div class="card-body">
-<canvas id="myAreaChart" width="100%" height="60"></canvas>
+<a class="btn btn-primary" href="/csv"> TO CSV</a>
+<canvas id="myAreaChart" width="50%" height="50"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </div>
 
 <script>
 const dates = [{% for i in tab %} '{{i.dt}}', {% endfor %}];
-const datas = [{% for i in tab %} '{{i.hum}}', {% endfor %}];
+const datas = [{% for i in tab %} '{{i.temp}}', {% endfor %}];
 var ctx = document.getElementById('myAreaChart').getContext('2d');
 var myChart = new Chart(ctx, {
 type: 'line',
@@ -13,7 +14,7 @@ data: {
 labels: dates,
 scaleShowLabels : false,
 datasets: [{
-label: 'humidité',
+label: 'La température',
 data:datas,
 borderColor: [
 'rgba(0,0,2,1)',

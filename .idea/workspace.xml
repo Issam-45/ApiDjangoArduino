@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13d40b4-9692-4332-aef9-c04c58fa3660" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApp/templates/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyApp/templates/charts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>

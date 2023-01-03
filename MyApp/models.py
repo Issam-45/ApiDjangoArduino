@@ -1,5 +1,5 @@
 from django.db import models
-import telepot
+import telepot, pywhatkit
 
 token = "5907427756:AAF6IA7Y5fnFoS9rBFi51YuxP8l8gyT3U1s"
 chat_id = "1911730761"
@@ -17,4 +17,5 @@ class Dht (models.Model):
     def save(self, *args, **kwargs):
         if self.temp > 10:
             bot.sendMessage(chat_id, "High temp!" + str(self.temp))
+            pywhatkit.sendwhatmsg_instantly(f"+212604009484", 'vvvv')
         return super().save(*args, **kwargs)
